@@ -10,8 +10,8 @@ const people = [
   {id:'manager',name:'big L (Manager)',role:'manager'},
 ];
 const initial = [
-  {id:'s1',owner:'ameer',date:'2026-10-23',start:'15:00',end:'23:00',location:'Southern Comfort',position:'Lift Operator',note:'Need coverage for Friday pls.',status:'open',comments:[],offers:[]},
-  {id:'s2',owner:'ty',date:'2026-10-27',start:'07:00',end:'15:00',location:'Ridge Runner',position:'Lift Operator',note:'Would appreciate the help!',status:'open',comments:[],offers:[]}
+  {id:'s1',owner:'ameer',date:'2026-12-23',start:'8:00',end:'16:45',location:'Southern Comfort',position:'Lift Operator',note:'Need coverage for Friday pls.',status:'open',comments:[],offers:[]},
+  {id:'s2',owner:'ty',date:'2026-12-27',start:'11:30',end:'20:15',location:'Ridge Runner',position:'Lift Operator',note:'Would appreciate the help!',status:'open',comments:[],offers:[]}
 ];
 const personName = id => people.find(p=>p.id===id)?.name || 'Unknown';
 const stamp = () => new Date().toLocaleString();
