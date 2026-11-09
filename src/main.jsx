@@ -4,20 +4,20 @@ import './style.css';
 
 // Demo-only data. Accounts and permissions must be implemented server-side before launch.
 const people = [
-  {id:'alex',name:'Alex',role:'employee'},
-  {id:'jordan',name:'Jordan',role:'employee'},
-  {id:'taylor',name:'Taylor',role:'employee'},
-  {id:'manager',name:'Morgan (Manager)',role:'manager'},
+  {id:'ameer',name:'Ameer',role:'employee'},
+  {id:'wes',name:'Wes',role:'employee'},
+  {id:'ty',name:'Ty',role:'employee'},
+  {id:'manager',name:'big L (Manager)',role:'manager'},
 ];
 const initial = [
-  {id:'s1',owner:'alex',date:'2026-10-23',start:'15:00',end:'23:00',location:'Building A',position:'Warehouse Operator',note:'Need coverage for Friday.',status:'open',comments:[],offers:[]},
-  {id:'s2',owner:'taylor',date:'2026-10-27',start:'07:00',end:'15:00',location:'Building B',position:'Shipping',note:'Would appreciate the help!',status:'open',comments:[],offers:[]},
+  {id:'s1',owner:'ameer',date:'2026-10-23',start:'15:00',end:'23:00',location:'Southern Comfort',position:'Lift Operator',note:'Need coverage for Friday pls.',status:'open',comments:[],offers:[]},
+  {id:'s2',owner:'ty',date:'2026-10-27',start:'07:00',end:'15:00',location:'Ridge Runner',position:'Lift Operator',note:'Would appreciate the help!',status:'open',comments:[],offers:[]}
 ];
 const personName = id => people.find(p=>p.id===id)?.name || 'Unknown';
 const stamp = () => new Date().toLocaleString();
 const clock = t => {const [h,m]=t.split(':').map(Number); return new Date(2026,0,1,h,m).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'});};
 function App(){
- const [user,setUser]=useState('alex');
+ const [user,setUser]=useState('ameer');
  const [page,setPage]=useState('board');
  const [shifts,setShifts]=useState(()=>{try{return JSON.parse(localStorage.getItem('shift-demo-v1'))||initial}catch{return initial}});
  const [emailLog,setEmailLog]=useState([]);
