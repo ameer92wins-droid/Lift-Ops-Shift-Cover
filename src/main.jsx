@@ -27,6 +27,11 @@ const LOCATIONS = [
   'Ridge Runner',
 ];
 
+const POSITIONS = [
+  'Lift Operator',
+  'Team Lead',
+];
+
 const EMPTY_DRAFT = {
   date: '',
   start: '',
@@ -611,20 +616,29 @@ function App() {
                 </select>
               </label>
 
-              <label>
-                Position / qualification
-                <input
-                  required
-                  placeholder="e.g. Warehouse Operator"
-                  value={draft.position}
-                  onChange={e =>
-                    setDraft({
-                      ...draft,
-                      position: e.target.value,
-                    })
-                  }
-                />
-              </label>
+              
+<label>
+  Position / qualification
+  <select
+    required
+    value={draft.position}
+    onChange={e =>
+      setDraft({
+        ...draft,
+        position: e.target.value,
+      })
+    }
+  >
+    <option value="">Select a position</option>
+
+    {POSITIONS.map(position => (
+      <option key={position} value={position}>
+        {position}
+      </option>
+    ))}
+  </select>
+</label>
+
 
               <label>
                 Optional note
