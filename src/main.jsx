@@ -22,7 +22,7 @@ const LOCATIONS = [
   'Graduate Triple',
   'Valley Express',
   'Weider Express',
-  'North Rope,'
+  'North Rope',
   'Floater',
   'Ridge Runner',
 ];
